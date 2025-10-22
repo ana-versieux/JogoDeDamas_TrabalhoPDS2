@@ -1,0 +1,11 @@
+Funcional: "Como jogador, eu quero ver o tabuleiro atualizado após cada jogada para saber a posição das peças."
+
+Funcional: "Como jogador, eu quero inserir uma jogada especificando a posição de origem e destino (ex: A3-B4) para movimentar uma peça, caso seja uma jogada válida."
+
+Funcional: "Como jogador, eu quero que o sistema valide minhas jogadas para garantir que apenas movimentos legais de damas (andar para frente, capturar na diagonal) sejam aceitos."
+
+Funcional: "Como jogador, eu quero que uma peça se torne uma Dama ao atingir a última fileira do lado adversário."
+
+Não Funcional (Usabilidade): "Como jogador, eu quero receber uma mensagem clara quando tentar fazer uma jogada inválida."
+
+Não Funcional (Desempenho/Interface): "O jogo deve ser totalmente jogável via terminal (comandos no terminal), sem depender de janelas gráficas."
