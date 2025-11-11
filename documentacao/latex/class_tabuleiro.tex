@@ -1,0 +1,169 @@
+\doxysection{Tabuleiro Class Reference}
+\hypertarget{class_tabuleiro}{}\label{class_tabuleiro}\index{Tabuleiro@{Tabuleiro}}
+
+
+Classe \doxylink{class_tabuleiro}{Tabuleiro}.  
+
+
+
+
+{\ttfamily \#include $<$tabuleiro.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tabuleiro_a9b76bfdd7176fd0b4fdee7296a6841e5}{Tabuleiro}} ()
+\begin{DoxyCompactList}\small\item\em construtor da classe \doxylink{class_tabuleiro}{Tabuleiro} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tabuleiro_ae4efe7b7b0ac6ae9e252d30c5fa89e39}{desenhar\+Tabuleiro}} () const
+\begin{DoxyCompactList}\small\item\em método para desenhar o tabuleiro \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tabuleiro_a71c0f82b3e88526862da4a42bce99b57}{adicionar\+Peca}} (\mbox{\hyperlink{class_peca}{Peca}} \texorpdfstring{$\ast$}{*}peca)
+\begin{DoxyCompactList}\small\item\em método para adicionar uma peça ao tabuleiro \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tabuleiro_aceb570861dfa85eac55f004896dac21d}{remover\+Peca}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em método para remover uma peça do tabuleiro \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_peca}{Peca}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_tabuleiro_a2bf0112f8f43a2211065de4448443400}{get\+Peca}} (int x, int y) const
+\begin{DoxyCompactList}\small\item\em método para obter uma peça do tabuleiro \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tabuleiro_ad99f3c63ab6b99b83f400ed9197c592c}{esta\+Vazio}} (int x, int y) const
+\begin{DoxyCompactList}\small\item\em método para verificar se a casa está vazia \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tabuleiro_a9e206d944a20e2012a88289b066606a1}{mover\+Peca}} (int origemX, int origemY, int destinoX, int destinoY)
+\begin{DoxyCompactList}\small\item\em método para mover uma peça \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_tabuleiro_a06058cea00fd3a1ed7ae2a71dc14a00e}{posicao\+Valida}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em método para verificar se a posição é válida \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe \doxylink{class_tabuleiro}{Tabuleiro}. 
+
+Contém os atributos e métodos necessários para gerenciar o tabuleiro do jogo de damas. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_tabuleiro_a9b76bfdd7176fd0b4fdee7296a6841e5}\index{Tabuleiro@{Tabuleiro}!Tabuleiro@{Tabuleiro}}
+\index{Tabuleiro@{Tabuleiro}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{Tabuleiro()}{Tabuleiro()}}
+{\footnotesize\ttfamily \label{class_tabuleiro_a9b76bfdd7176fd0b4fdee7296a6841e5} 
+Tabuleiro\+::\+Tabuleiro (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+construtor da classe \doxylink{class_tabuleiro}{Tabuleiro} 
+
+Instancia um objeto da classe \doxylink{class_tabuleiro}{Tabuleiro} 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_tabuleiro_a71c0f82b3e88526862da4a42bce99b57}\index{Tabuleiro@{Tabuleiro}!adicionarPeca@{adicionarPeca}}
+\index{adicionarPeca@{adicionarPeca}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{adicionarPeca()}{adicionarPeca()}}
+{\footnotesize\ttfamily \label{class_tabuleiro_a71c0f82b3e88526862da4a42bce99b57} 
+void Tabuleiro\+::adicionar\+Peca (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_peca}{Peca}} \texorpdfstring{$\ast$}{*}}]{peca}{}\end{DoxyParamCaption})}
+
+
+
+método para adicionar uma peça ao tabuleiro 
+
+Verifica se a posição é válida e se a casa está vazia antes de adicionar a peça. \Hypertarget{class_tabuleiro_ae4efe7b7b0ac6ae9e252d30c5fa89e39}\index{Tabuleiro@{Tabuleiro}!desenharTabuleiro@{desenharTabuleiro}}
+\index{desenharTabuleiro@{desenharTabuleiro}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{desenharTabuleiro()}{desenharTabuleiro()}}
+{\footnotesize\ttfamily \label{class_tabuleiro_ae4efe7b7b0ac6ae9e252d30c5fa89e39} 
+void Tabuleiro\+::desenhar\+Tabuleiro (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+método para desenhar o tabuleiro 
+
+Desenha o tabuleiro no console. \Hypertarget{class_tabuleiro_ad99f3c63ab6b99b83f400ed9197c592c}\index{Tabuleiro@{Tabuleiro}!estaVazio@{estaVazio}}
+\index{estaVazio@{estaVazio}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{estaVazio()}{estaVazio()}}
+{\footnotesize\ttfamily \label{class_tabuleiro_ad99f3c63ab6b99b83f400ed9197c592c} 
+bool Tabuleiro\+::esta\+Vazio (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption}) const}
+
+
+
+método para verificar se a casa está vazia 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Coordenada X da posição da casa \\
+\hline
+{\em y} & Coordenada Y da posição da casa\\
+\hline
+\end{DoxyParams}
+Verifica se a casa especificada está vazia. \Hypertarget{class_tabuleiro_a2bf0112f8f43a2211065de4448443400}\index{Tabuleiro@{Tabuleiro}!getPeca@{getPeca}}
+\index{getPeca@{getPeca}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{getPeca()}{getPeca()}}
+{\footnotesize\ttfamily \label{class_tabuleiro_a2bf0112f8f43a2211065de4448443400} 
+\mbox{\hyperlink{class_peca}{Peca}} \texorpdfstring{$\ast$}{*} Tabuleiro\+::get\+Peca (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption}) const}
+
+
+
+método para obter uma peça do tabuleiro 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Coordenada X da posição da peça \\
+\hline
+{\em y} & Coordenada Y da posição da peça\\
+\hline
+\end{DoxyParams}
+Retorna a peça na posição especificada. \Hypertarget{class_tabuleiro_a9e206d944a20e2012a88289b066606a1}\index{Tabuleiro@{Tabuleiro}!moverPeca@{moverPeca}}
+\index{moverPeca@{moverPeca}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{moverPeca()}{moverPeca()}}
+{\footnotesize\ttfamily \label{class_tabuleiro_a9e206d944a20e2012a88289b066606a1} 
+void Tabuleiro\+::mover\+Peca (\begin{DoxyParamCaption}\item[{int}]{origemX}{, }\item[{int}]{origemY}{, }\item[{int}]{destinoX}{, }\item[{int}]{destinoY}{}\end{DoxyParamCaption})}
+
+
+
+método para mover uma peça 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origemX} & Coordenada X da posição de origem \\
+\hline
+{\em origemY} & Coordenada Y da posição de origem \\
+\hline
+{\em destinoX} & Coordenada X da posição de destino \\
+\hline
+{\em destinoY} & Coordenada Y da posição de destino\\
+\hline
+\end{DoxyParams}
+Move a peça da posição de origem para a posição de destino. \Hypertarget{class_tabuleiro_a06058cea00fd3a1ed7ae2a71dc14a00e}\index{Tabuleiro@{Tabuleiro}!posicaoValida@{posicaoValida}}
+\index{posicaoValida@{posicaoValida}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{posicaoValida()}{posicaoValida()}}
+{\footnotesize\ttfamily \label{class_tabuleiro_a06058cea00fd3a1ed7ae2a71dc14a00e} 
+bool Tabuleiro\+::posicao\+Valida (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+método para verificar se a posição é válida 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Coordenada X da posição \\
+\hline
+{\em y} & Coordenada Y da posição\\
+\hline
+\end{DoxyParams}
+Método que verifica se a posição especificada é válida. \Hypertarget{class_tabuleiro_aceb570861dfa85eac55f004896dac21d}\index{Tabuleiro@{Tabuleiro}!removerPeca@{removerPeca}}
+\index{removerPeca@{removerPeca}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{removerPeca()}{removerPeca()}}
+{\footnotesize\ttfamily \label{class_tabuleiro_aceb570861dfa85eac55f004896dac21d} 
+void Tabuleiro\+::remover\+Peca (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+método para remover uma peça do tabuleiro 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Coordenada X da posição da peça \\
+\hline
+{\em y} & Coordenada Y da posição da peça\\
+\hline
+\end{DoxyParams}
+Remove a peça da casa especificada. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+contratos/\mbox{\hyperlink{tabuleiro_8hpp}{tabuleiro.\+hpp}}\item 
+src/tabuleiro.\+cpp\end{DoxyCompactItemize}

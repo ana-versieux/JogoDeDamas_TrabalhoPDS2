@@ -1,0 +1,39 @@
+\doxysection{peca.\+hpp}
+\hypertarget{peca_8hpp_source}{}\label{peca_8hpp_source}\index{contratos/peca.hpp@{contratos/peca.hpp}}
+\mbox{\hyperlink{peca_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ PECA\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ PECA\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ BRANCA,\ PRETA}
+\DoxyCodeLine{00015\ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{struct\ }Posicao\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ x;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ y;}
+\DoxyCodeLine{00024\ \ \ \ \ Posicao(\textcolor{keywordtype}{int}\ param\_x\ =\ 0,\ \textcolor{keywordtype}{int}\ param\_y\ =\ 0)\ :\ x(param\_x),\ y(param\_y)\ \{\}}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_peca_a1cda58536a3264e6fc0ea0a83e914368}{Peca}}\ \{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_peca_a1cda58536a3264e6fc0ea0a83e914368}{Peca}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}}\ cor,\ \textcolor{keywordtype}{bool}\ dama\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_peca_a9258376a082389cca27eec739410e17c}{moverPara}}(\textcolor{keywordtype}{int}\ novoX,\ \textcolor{keywordtype}{int}\ novoY);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_peca_ae68beb7934a2086168d21a79fce9ce7a}{ehDama}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_peca_a789bfc3695e0d0ed93d8535ec8941b53}{setToDama}}();}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}}\ \mbox{\hyperlink{class_peca_afc80ba49f95dbb9e418f956db53295ab}{getCor}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{struct_posicao}{Posicao}}\ \mbox{\hyperlink{class_peca_af9af1134ef338be8e76071feedc350bb}{getPosicao}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_peca_aa96122ad62dcf2b0c0ccab38bc3f9206}{podeMover}}(\textcolor{keywordtype}{int}\ dx,\ \textcolor{keywordtype}{int}\ dy)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{struct_posicao}{Posicao}}\ posicao\_;}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}}\ cor\_;}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ dama\_;}
+\DoxyCodeLine{00046\ \};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PECA\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,137 @@
+\doxysection{Jogo Class Reference}
+\hypertarget{class_jogo}{}\label{class_jogo}\index{Jogo@{Jogo}}
+
+
+Classe \doxylink{class_jogo}{Jogo}.  
+
+
+
+
+{\ttfamily \#include $<$jogo.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_jogo_ada6b127710abe5e25240b09b1a13b502}{Jogo}} ()
+\begin{DoxyCompactList}\small\item\em construtor da classe \doxylink{class_jogo}{Jogo} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jogo_af203124ab72172a1f9a8cd174a659b40}{iniciar\+Jogo}} ()
+\begin{DoxyCompactList}\small\item\em método para iniciar o jogo \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_jogo_a20d2c659f7a56d90bcfa0c2346c1a099}{processar\+Jogada}} (const std\+::string \&entrada)
+\begin{DoxyCompactList}\small\item\em método para processar jogadas \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_jogo_a0f6c3759003b934bedf257429194cba7}{jogada\+Valida}} (int origX, int origY, int destX, int destY) const
+\begin{DoxyCompactList}\small\item\em método para validar jogadas \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jogo_a3a5245ad8a035cef38ca50a118cecf28}{aplicar\+Jogada}} (int origX, int origY, int destX, int destY)
+\begin{DoxyCompactList}\small\item\em método para aplicar uma jogada \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_jogo_a338b7d10c953a9706b2ccb43d0f4bfd3}{jogo\+Acabou}} () const
+\begin{DoxyCompactList}\small\item\em método para verificar se o jogo acabou \end{DoxyCompactList}\item 
+\mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}} \mbox{\hyperlink{class_jogo_a9771646137b4c291cbfd8234ac6b36f9}{get\+Vencedor}} () const
+\begin{DoxyCompactList}\small\item\em método para obter o vencedor \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe \doxylink{class_jogo}{Jogo}. 
+
+Contém os atributos e métodos necessários para gerenciar o jogo de damas. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_jogo_ada6b127710abe5e25240b09b1a13b502}\index{Jogo@{Jogo}!Jogo@{Jogo}}
+\index{Jogo@{Jogo}!Jogo@{Jogo}}
+\doxysubsubsection{\texorpdfstring{Jogo()}{Jogo()}}
+{\footnotesize\ttfamily \label{class_jogo_ada6b127710abe5e25240b09b1a13b502} 
+Jogo\+::\+Jogo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+construtor da classe \doxylink{class_jogo}{Jogo} 
+
+Instancia um objeto da classe \doxylink{class_jogo}{Jogo} 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_jogo_a3a5245ad8a035cef38ca50a118cecf28}\index{Jogo@{Jogo}!aplicarJogada@{aplicarJogada}}
+\index{aplicarJogada@{aplicarJogada}!Jogo@{Jogo}}
+\doxysubsubsection{\texorpdfstring{aplicarJogada()}{aplicarJogada()}}
+{\footnotesize\ttfamily \label{class_jogo_a3a5245ad8a035cef38ca50a118cecf28} 
+void Jogo\+::aplicar\+Jogada (\begin{DoxyParamCaption}\item[{int}]{origX}{, }\item[{int}]{origY}{, }\item[{int}]{destX}{, }\item[{int}]{destY}{}\end{DoxyParamCaption})}
+
+
+
+método para aplicar uma jogada 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origX} & Coordenada X da posição de origem \\
+\hline
+{\em origY} & Coordenada Y da posição de origem \\
+\hline
+{\em destX} & Coordenada X da posição de destino \\
+\hline
+{\em destY} & Coordenada Y da posição de destino\\
+\hline
+\end{DoxyParams}
+Método que aplica uma jogada no tabuleiro, movendo a peça da posição de origem para a posição de destino. \Hypertarget{class_jogo_a9771646137b4c291cbfd8234ac6b36f9}\index{Jogo@{Jogo}!getVencedor@{getVencedor}}
+\index{getVencedor@{getVencedor}!Jogo@{Jogo}}
+\doxysubsubsection{\texorpdfstring{getVencedor()}{getVencedor()}}
+{\footnotesize\ttfamily \label{class_jogo_a9771646137b4c291cbfd8234ac6b36f9} 
+\mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}} Jogo\+::get\+Vencedor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+método para obter o vencedor 
+
+Método que verifica qual jogador venceu. \Hypertarget{class_jogo_af203124ab72172a1f9a8cd174a659b40}\index{Jogo@{Jogo}!iniciarJogo@{iniciarJogo}}
+\index{iniciarJogo@{iniciarJogo}!Jogo@{Jogo}}
+\doxysubsubsection{\texorpdfstring{iniciarJogo()}{iniciarJogo()}}
+{\footnotesize\ttfamily \label{class_jogo_af203124ab72172a1f9a8cd174a659b40} 
+void Jogo\+::iniciar\+Jogo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+método para iniciar o jogo 
+
+Método que inicializa o tabuleiro com as peças nas posições iniciais. \Hypertarget{class_jogo_a0f6c3759003b934bedf257429194cba7}\index{Jogo@{Jogo}!jogadaValida@{jogadaValida}}
+\index{jogadaValida@{jogadaValida}!Jogo@{Jogo}}
+\doxysubsubsection{\texorpdfstring{jogadaValida()}{jogadaValida()}}
+{\footnotesize\ttfamily \label{class_jogo_a0f6c3759003b934bedf257429194cba7} 
+bool Jogo\+::jogada\+Valida (\begin{DoxyParamCaption}\item[{int}]{origX}{, }\item[{int}]{origY}{, }\item[{int}]{destX}{, }\item[{int}]{destY}{}\end{DoxyParamCaption}) const}
+
+
+
+método para validar jogadas 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origX} & Coordenada X da posição de origem \\
+\hline
+{\em origY} & Coordenada Y da posição de origem \\
+\hline
+{\em destX} & Coordenada X da posição de destino \\
+\hline
+{\em destY} & Coordenada Y da posição de destino\\
+\hline
+\end{DoxyParams}
+Método que verifica se uma jogada é válida de acordo com as regras do jogo. \Hypertarget{class_jogo_a338b7d10c953a9706b2ccb43d0f4bfd3}\index{Jogo@{Jogo}!jogoAcabou@{jogoAcabou}}
+\index{jogoAcabou@{jogoAcabou}!Jogo@{Jogo}}
+\doxysubsubsection{\texorpdfstring{jogoAcabou()}{jogoAcabou()}}
+{\footnotesize\ttfamily \label{class_jogo_a338b7d10c953a9706b2ccb43d0f4bfd3} 
+bool Jogo\+::jogo\+Acabou (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+método para verificar se o jogo acabou 
+
+Método que verifica se o jogo acabou, ou seja, se um dos jogadores não possui mais peças. \Hypertarget{class_jogo_a20d2c659f7a56d90bcfa0c2346c1a099}\index{Jogo@{Jogo}!processarJogada@{processarJogada}}
+\index{processarJogada@{processarJogada}!Jogo@{Jogo}}
+\doxysubsubsection{\texorpdfstring{processarJogada()}{processarJogada()}}
+{\footnotesize\ttfamily \label{class_jogo_a20d2c659f7a56d90bcfa0c2346c1a099} 
+bool Jogo\+::processar\+Jogada (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{entrada}{}\end{DoxyParamCaption})}
+
+
+
+método para processar jogadas 
+
+Método que valida e aplica uma jogada no tabuleiro. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+contratos/\mbox{\hyperlink{jogo_8hpp}{jogo.\+hpp}}\item 
+src/jogo.\+cpp\end{DoxyCompactItemize}

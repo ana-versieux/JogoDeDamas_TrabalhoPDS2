@@ -1,0 +1,122 @@
+\doxysection{Peca Class Reference}
+\hypertarget{class_peca}{}\label{class_peca}\index{Peca@{Peca}}
+
+
+Peça.  
+
+
+
+
+{\ttfamily \#include $<$peca.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_peca_a1cda58536a3264e6fc0ea0a83e914368}{Peca}} (int x, int y, \mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}} cor, bool dama=false)
+\begin{DoxyCompactList}\small\item\em construtor da classe \doxylink{class_peca}{Peca} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_peca_a9258376a082389cca27eec739410e17c}{mover\+Para}} (int novoX, int novoY)
+\begin{DoxyCompactList}\small\item\em método para mover a peça \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_peca_ae68beb7934a2086168d21a79fce9ce7a}{eh\+Dama}} () const
+\begin{DoxyCompactList}\small\item\em método para verificar se a peça é uma dama \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_peca_a789bfc3695e0d0ed93d8535ec8941b53}{set\+To\+Dama}} ()
+\begin{DoxyCompactList}\small\item\em método para promover a peça a dama \end{DoxyCompactList}\item 
+\mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}} \mbox{\hyperlink{class_peca_afc80ba49f95dbb9e418f956db53295ab}{get\+Cor}} () const
+\begin{DoxyCompactList}\small\item\em método para obter a cor da peça \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_posicao}{Posicao}} \mbox{\hyperlink{class_peca_af9af1134ef338be8e76071feedc350bb}{get\+Posicao}} () const
+\begin{DoxyCompactList}\small\item\em método para obter a posição da peça \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_peca_aa96122ad62dcf2b0c0ccab38bc3f9206}{pode\+Mover}} (int dx, int dy) const
+\begin{DoxyCompactList}\small\item\em método para verificar se a peça pode se mover \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Peça. 
+
+Esta classe contém os atributos e métodos necessários para gerenciar uma peça do jogo de damas. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_peca_a1cda58536a3264e6fc0ea0a83e914368}\index{Peca@{Peca}!Peca@{Peca}}
+\index{Peca@{Peca}!Peca@{Peca}}
+\doxysubsubsection{\texorpdfstring{Peca()}{Peca()}}
+{\footnotesize\ttfamily \label{class_peca_a1cda58536a3264e6fc0ea0a83e914368} 
+Peca\+::\+Peca (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{\mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}}}]{cor}{, }\item[{bool}]{dama}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+
+
+construtor da classe \doxylink{class_peca}{Peca} 
+
+Instancia uma peça no tabuleiro. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_peca_ae68beb7934a2086168d21a79fce9ce7a}\index{Peca@{Peca}!ehDama@{ehDama}}
+\index{ehDama@{ehDama}!Peca@{Peca}}
+\doxysubsubsection{\texorpdfstring{ehDama()}{ehDama()}}
+{\footnotesize\ttfamily \label{class_peca_ae68beb7934a2086168d21a79fce9ce7a} 
+bool Peca\+::eh\+Dama (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+método para verificar se a peça é uma dama 
+
+Método que verifica se a peça é uma dama. \Hypertarget{class_peca_afc80ba49f95dbb9e418f956db53295ab}\index{Peca@{Peca}!getCor@{getCor}}
+\index{getCor@{getCor}!Peca@{Peca}}
+\doxysubsubsection{\texorpdfstring{getCor()}{getCor()}}
+{\footnotesize\ttfamily \label{class_peca_afc80ba49f95dbb9e418f956db53295ab} 
+\mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}} Peca\+::get\+Cor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+método para obter a cor da peça 
+
+Método que retorna a cor da peça. \Hypertarget{class_peca_af9af1134ef338be8e76071feedc350bb}\index{Peca@{Peca}!getPosicao@{getPosicao}}
+\index{getPosicao@{getPosicao}!Peca@{Peca}}
+\doxysubsubsection{\texorpdfstring{getPosicao()}{getPosicao()}}
+{\footnotesize\ttfamily \label{class_peca_af9af1134ef338be8e76071feedc350bb} 
+\mbox{\hyperlink{struct_posicao}{Posicao}} Peca\+::get\+Posicao (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+método para obter a posição da peça 
+
+Método que retorna a posição da peça. \Hypertarget{class_peca_a9258376a082389cca27eec739410e17c}\index{Peca@{Peca}!moverPara@{moverPara}}
+\index{moverPara@{moverPara}!Peca@{Peca}}
+\doxysubsubsection{\texorpdfstring{moverPara()}{moverPara()}}
+{\footnotesize\ttfamily \label{class_peca_a9258376a082389cca27eec739410e17c} 
+void Peca\+::mover\+Para (\begin{DoxyParamCaption}\item[{int}]{novoX}{, }\item[{int}]{novoY}{}\end{DoxyParamCaption})}
+
+
+
+método para mover a peça 
+
+
+\begin{DoxyParams}{Parameters}
+{\em novoX} & Nova coordenada X da peça \\
+\hline
+{\em novoY} & Nova coordenada Y da peça\\
+\hline
+\end{DoxyParams}
+Método que move a peça para uma nova posição no tabuleiro. \Hypertarget{class_peca_aa96122ad62dcf2b0c0ccab38bc3f9206}\index{Peca@{Peca}!podeMover@{podeMover}}
+\index{podeMover@{podeMover}!Peca@{Peca}}
+\doxysubsubsection{\texorpdfstring{podeMover()}{podeMover()}}
+{\footnotesize\ttfamily \label{class_peca_aa96122ad62dcf2b0c0ccab38bc3f9206} 
+bool Peca\+::pode\+Mover (\begin{DoxyParamCaption}\item[{int}]{dx}{, }\item[{int}]{dy}{}\end{DoxyParamCaption}) const}
+
+
+
+método para verificar se a peça pode se mover 
+
+Método que verifica se a peça pode se mover para a posição desejada. \Hypertarget{class_peca_a789bfc3695e0d0ed93d8535ec8941b53}\index{Peca@{Peca}!setToDama@{setToDama}}
+\index{setToDama@{setToDama}!Peca@{Peca}}
+\doxysubsubsection{\texorpdfstring{setToDama()}{setToDama()}}
+{\footnotesize\ttfamily \label{class_peca_a789bfc3695e0d0ed93d8535ec8941b53} 
+void Peca\+::set\+To\+Dama (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+método para promover a peça a dama 
+
+Método que promove a peça a dama. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+contratos/\mbox{\hyperlink{peca_8hpp}{peca.\+hpp}}\item 
+src/peca.\+cpp\end{DoxyCompactItemize}

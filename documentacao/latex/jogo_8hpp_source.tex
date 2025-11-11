@@ -1,0 +1,37 @@
+\doxysection{jogo.\+hpp}
+\hypertarget{jogo_8hpp_source}{}\label{jogo_8hpp_source}\index{contratos/jogo.hpp@{contratos/jogo.hpp}}
+\mbox{\hyperlink{jogo_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ JOGO\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ JOGO\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{tabuleiro_8hpp}{tabuleiro.hpp}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{peca_8hpp}{peca.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_jogo_ada6b127710abe5e25240b09b1a13b502}{Jogo}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_jogo_ada6b127710abe5e25240b09b1a13b502}{Jogo}}();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogo_af203124ab72172a1f9a8cd174a659b40}{iniciarJogo}}();}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_jogo_a20d2c659f7a56d90bcfa0c2346c1a099}{processarJogada}}(\textcolor{keyword}{const}\ std::string\&\ entrada);}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_jogo_a0f6c3759003b934bedf257429194cba7}{jogadaValida}}(\textcolor{keywordtype}{int}\ origX,\ \textcolor{keywordtype}{int}\ origY,\ \textcolor{keywordtype}{int}\ destX,\ \textcolor{keywordtype}{int}\ destY)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_jogo_a3a5245ad8a035cef38ca50a118cecf28}{aplicarJogada}}(\textcolor{keywordtype}{int}\ origX,\ \textcolor{keywordtype}{int}\ origY,\ \textcolor{keywordtype}{int}\ destX,\ \textcolor{keywordtype}{int}\ destY);}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_jogo_a338b7d10c953a9706b2ccb43d0f4bfd3}{jogoAcabou}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}}\ \mbox{\hyperlink{class_jogo_a9771646137b4c291cbfd8234ac6b36f9}{getVencedor}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}}\ tabuleiro\_;}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{peca_8hpp_acc527157f253fa3f19126194bb52e635}{Cor}}\ turnoAtual\_;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{bool}\ emJogo\_;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ alternarTurno();}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ transformarEmDama(\mbox{\hyperlink{class_peca}{Peca}}*\ peca,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ validarEntrada(\textcolor{keyword}{const}\ std::string\&\ entrada,\ \textcolor{keywordtype}{int}\&\ origX,\ \textcolor{keywordtype}{int}\&\ origY,\ \textcolor{keywordtype}{int}\&\ destX,\ \textcolor{keywordtype}{int}\&\ destY)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ JOGO\_H}}
+
+\end{DoxyCode}

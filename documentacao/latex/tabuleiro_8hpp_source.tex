@@ -1,0 +1,34 @@
+\doxysection{tabuleiro.\+hpp}
+\hypertarget{tabuleiro_8hpp_source}{}\label{tabuleiro_8hpp_source}\index{contratos/tabuleiro.hpp@{contratos/tabuleiro.hpp}}
+\mbox{\hyperlink{tabuleiro_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ TABULEIRO\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ TABULEIRO\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{peca_8hpp}{peca.hpp}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ TAMANHO\_TABULEIRO\ =\ 8;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_tabuleiro_a9b76bfdd7176fd0b4fdee7296a6841e5}{Tabuleiro}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_tabuleiro_a9b76bfdd7176fd0b4fdee7296a6841e5}{Tabuleiro}}();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tabuleiro_ae4efe7b7b0ac6ae9e252d30c5fa89e39}{desenharTabuleiro}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tabuleiro_a71c0f82b3e88526862da4a42bce99b57}{adicionarPeca}}(\mbox{\hyperlink{class_peca}{Peca}}*\ peca);}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tabuleiro_aceb570861dfa85eac55f004896dac21d}{removerPeca}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_peca}{Peca}}*\ \mbox{\hyperlink{class_tabuleiro_a2bf0112f8f43a2211065de4448443400}{getPeca}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_tabuleiro_ad99f3c63ab6b99b83f400ed9197c592c}{estaVazio}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tabuleiro_a9e206d944a20e2012a88289b066606a1}{moverPeca}}(\textcolor{keywordtype}{int}\ origemX,\ \textcolor{keywordtype}{int}\ origemY,\ \textcolor{keywordtype}{int}\ destinoX,\ \textcolor{keywordtype}{int}\ destinoY);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_tabuleiro_a06058cea00fd3a1ed7ae2a71dc14a00e}{posicaoValida}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_peca}{Peca}}*\ casas[TAMANHO\_TABULEIRO][TAMANHO\_TABULEIRO];}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ inicializarCasas();}
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TABULEIRO\_H}}
+
+\end{DoxyCode}
