@@ -5,8 +5,16 @@
 
 using namespace std;
 
+/**
+ * @brief construtor da classe Jogo
+ * @details Instancia um objeto da classe Jogo
+ */
 Jogo::Jogo() : turnoAtual_(Cor::BRANCA), emJogo_(true) {}
 
+/**
+ * @brief método para iniciar o jogo
+ * @details Método que inicializa o tabuleiro com as peças nas posições iniciais.
+ */
 void Jogo::iniciarJogo() {
     for (int i = 0; i < TAMANHO_TABULEIRO; i++) {
         for (int j = 0; j < TAMANHO_TABULEIRO; j++) {
