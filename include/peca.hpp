@@ -17,9 +17,10 @@ public:
 
     void moverPara(int novoX, int novoY);
     bool ehDama() const;
+    void setToDama();
     Cor getCor() const;
-    bool podeMover(int destX, int destY) const;
-    bool podeCapturar(int destX, int destY) const;
+    Posicao getPosicao() const;
+    bool podeMover(int dx, int dy) const;
 
 private:
     Posicao posicao_;
