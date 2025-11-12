@@ -1,5 +1,7 @@
 Jogo de Damas
 1) Como compilar e executar
+   Para compilar e executar o jogo basta acessar no terminal o src e digitar make. O make vai ser responsável por criar um executável. Logo depois, deve ser enviado o make run, que irá compilar o jogo.
+
 2) Arquitetura / organização
 
    O jogo é dividido em diferentes pastas: .vscode, documentação, include, src e o Doxyfile. Em .vscode é possível encontrar detalhes das configurações e compilações, tendo em vista que todo o trabalho foi escrito na plataforma VS code e, depois, transferido por meio dos commits para o Git Hub. Em documentação é possível encontrar dois arquivos: html e latex, que possuem dados do projeto. Na pasta include, há os arquivos .hpp, sendo eles “jogo.hpp”, “peca.hpp” e “tabuleiro.hpp”, possuindo as classes necessárias para o funcionamento do jogo. Na pasta src há 3 arquivos, o “jogo.cpp”, onde há todo o processo para que o jogo ocorra, o Makefile com suas definições e “tabuleiro.cpp”, com todas as funções para que o tabuleiro seja feito. Além disso, há o Doxyfile, com as descrições das configurações utilizadas no jogo. Cada arquivo do código será detalhado no decorrer do ReadMe.
@@ -11,7 +13,6 @@ Jogo de Damas
    O arquivo “jogo.hpp” define a classe “Jogo”, que controla a lógica da partida. É responsável por iniciar o jogo, processar e validar jogadas, alternar turnos, promover peças e verificar o fim da partida. Um objeto “Tabuleiro” é usado internamente e controla o turno atual e o estado do jogo, se está ativo ou encerrado.
    O Makefile foi criado para compilar os arquivos “peca.cpp”, “tabuleiro.cpp”, “jogo.cpp” e “main.cpp” para gerar o executável damas. O alvo “all” compila o programa e remove os arquivos temporários, enquanto o alvo “run” recompila, limpa a tela e executa o jogo.
    O Doxygen foi usado para gerar a documentação automática do código.
-
    O arquivo tabuleiro.cpp implementa a lógica principal de uma classe chamada Tabuleiro, que representa o tabuleiro de um jogo, provavelmente de damas ou xadrez. Essa classe gerencia as posições das peças dentro de uma matriz bidimensional, onde cada célula pode conter uma peça (Peca*) ou estar vazia (nullptr). O tabuleiro tem um tamanho fixo, definido pela constante TAMANHO_TABULEIRO, e todas as operações feitas sobre ele respeitam esse limite.
    Quando um objeto Tabuleiro é criado, seu construtor chama a função inicializarCasas. Essa função percorre todas as posições da matriz e define cada casa como nullptr, o que significa que o tabuleiro começa completamente vazio. Essa etapa é importante para evitar ponteiros aleatórios ou restos de memória de execuções anteriores.
    O método desenharTabuleiro é responsável por exibir o estado atual do tabuleiro no terminal. Ele imprime primeiro as letras das colunas (A, B, C, etc.) e depois as linhas numeradas. Em cada casa, o método verifica se há uma peça. Se a casa estiver vazia, imprime um espaço; caso haja uma peça, ele consulta a cor e o tipo da peça por meio dos métodos getCor() e ehDama() da classe Peca. As peças brancas são representadas por letras minúsculas (b para peças normais e B para damas), enquanto as peças pretas usam letras minúsculas (p) ou maiúsculas (P), dependendo do tipo. Dessa forma, o jogador pode visualizar facilmente o tabuleiro e distinguir as peças de acordo com sua cor e status.
@@ -21,24 +22,52 @@ Jogo de Damas
    O método moverPeca implementa a movimentação de peças dentro do tabuleiro. Ele recebe as coordenadas de origem e destino, e realiza o movimento somente se ambas as posições forem válidas, se existir uma peça na origem e se o destino estiver vazio. Quando essas condições são atendidas, a peça é retirada da posição de origem, atualiza internamente sua própria posição através do método moverPara, e depois é colocada na nova posição do tabuleiro. A função não apaga nem cria novas peças — apenas as move dentro da matriz. Também não verifica se    o movimento é permitido segundo as regras do jogo; essa responsabilidade deve estar em outro módulo do programa.
    Por fim, o método posicaoValida é uma pequena função auxiliar que verifica se as coordenadas passadas estão dentro dos limites do tabuleiro. Ele retorna verdadeiro se o valor de x e y estiver entre zero e o tamanho máximo do tabuleiro, e falso caso contrário. Essa verificação é usada em praticamente todas as outras funções da classe, garantindo que o programa não tente acessar posições fora dos limites da matriz, o que causaria erros de execução.
    Em resumo, o código de tabuleiro.cpp define uma estrutura robusta e organizada para controlar o estado de um tabuleiro de jogo. Ele é responsável por armazenar, exibir, mover e remover peças, garantindo a integridade do tabuleiro e a validade das operações básicas. A classe não contém as regras específicas do jogo (como movimentos válidos, capturas ou promoções), mas fornece todas as ferramentas necessárias para que essas regras possam ser implementadas em outro nível da aplicação. O código é bem estruturado e funcional, embora pudesse ser aprimorado com práticas modernas de C++, como o uso de ponteiros inteligentes para evitar vazamentos de memória e uma melhor distinção de erros ou tentativas inválidas de movimentação.
-
    É em “jogo.cpp” que a partida é coordenada. O tabuleiro é inicializado, as entradas dos usuários são processadas, os movimentos são validados, as jogadas são aplicadas, as peças que chegam são coroadas e é detectado o fim do jogo. O método para processar a jogada: verifica se o jogo ainda está ativo, faz a validação da entrada (por meio de validarEntrada, verificando algum erro), valida a jogada por meio de jogadaValida, aplica a jogada com aplicarJogada (movendo a peça e, se houver, remove a capturada), promove a peça a dama se chegou à última linha, por meio de transformarEmDama, checa fim de jogo com jogoAcabou e, caso tenha acabado, imprime o vencedor por meio de getVencedor, desenha e encerra a partida. Depois, o turno é alterado e o tabuleiro redesenhado.
    Em validarEntrada, é garantido que o formato está em sua forma correta, utilizando Tabuleiro::posicaoValida para limites do tabuleiro, enviando invalid_argument com mensagens quando algo está fora do esperado. Já em jogadaValida as regras são checadas: se existe peça na origem, se o turno está correto (cor deve coincidir com o turnoAtual_), se o destino está vazio e se o movimento é diagonal.  Em casos de peça comum com passo 1 (movimento simples absDx == 1), se não for dama, a branca só pode mover para frente e, retorna peca->podeMover(dx,dy) para delegar o detalhe do movimento à peça. Em caso de captura com salto 2 (peça comum absDx == 2), a casa do meio é checada. Deve existir uma peça adversária ali, se for aliada, é inválido, caso contrário, retorna true (captura válida). Em caso de Dama (movimento “deslizante” em diagonal, qualquer distância), o caminho diagonal é percorrido e é contado quantas peças existem no meio. Se for maior que 1 peça no caminho, é inválido, não podendo saltar sobre mais de uma. Se houver 1 peça no caminho: caso a peça é aliada, é inválido e, caso é inimiga, a captura é válida. Se não houverem peças no caminho, o movimento simples é válido. Isso permite com que a dama ande livremente sem capturar, quando o caminho está limpo, e capture uma peça por lance.
    Em aplicarJogada, é calculada a direção e caminho da orig ao dest. A primeira peça encontrada no caminho, caso houver, é removida, efetivando a captura. Por fim, chama tabuleiro_.moverPeca. Em alterarTurno() há uma troca de Branca <-> Preta. Em transformarEmDama, se a peça não é dama, a branca vira dama quando alcançar y == TAMANHO_TABULEIRO -1 e a preta vira dama quando alcançar y == 0; Peca -> setToDama é chamado e uma mensagem é imprimida.
    Em jogoAcabou() const e getVencedor() const, ambos contam quantas peças brancas e pretas existem no tabuleiro. jogoAcabou retorna true se uma das cores ficou sem peças e getVencedor retorna BRANCA se há alguma branca, caso contrário, retorna PRETA.
    Em “jogo.cpp” foi utilizado de entrada textual no formato A3-B4 com conversão para índices de matriz; exceções std::invalid_argument para validar formato/posições; principais regras de damas; fluxo de jogo organizado; ponteiros para peças e um contêiner Tabuleiro que oferece operações, e mensagens de erro claras para guiar o jogador.
+   O “main.cpp” é o arquivo que contém a implementação da função principal que controla o Jogo de Damas em C++. Ele começa incluindo as bibliotecas padrão e o cabeçalho “jogo.hpp”, que contém a definição da classe responsável pela lógica do jogo. Dentro da função main(), é criado um objeto da classe Jogo e chamado o método iniciarJogo(), que configura o tabuleiro inicial e define o jogador que começa. Em seguida, o programa entra em um laço que continua enquanto o jogo não termina, solicitando que o usuário insira uma jogada no formato “A3-B4” ou digite “sair” para encerrar. Cada jogada é lida e enviada para o método processarJogada(), que realiza as verificações, movimenta as peças e alterna o turno dos jogadores. Caso o jogador digite “sair”, o programa imprime uma mensagem e encerra.
+   Em “peça.cpp” ocorre a implementação da classe Peca, responsável por representar cada peça do jogo de damas. Ele define o comportamento básico e os atributos essenciais de uma peça, como posição, cor e estado (se é ou não uma dama). O construtor inicializa a peça com suas coordenadas no tabuleiro, sua cor e um valor booleano indicando se é dama. O método moverPara() atualiza a posição da peça quando ela se move. Os métodos ehDama() e setToDama() verificam e modificam o estado da peça, promovendo-a a dama quando necessário. Já getCor() e getPosicao() retornam, respectivamente, a cor e a posição atual da peça. Por fim, o método podeMover() verifica se a peça pode se mover para determinada direção, respeitando a regra básica de movimentação das damas: peças brancas movem-se para frente (aumentando o eixo Y) e peças pretas movem-se para trás (diminuindo o eixo Y). Assim, esse código define as funções fundamentais para o controle das peças dentro da lógica do jogo.
 
 4) Instruções de uso
+   O make está dentro da pasta source juntos dos arquivos em cpp, então para rodar o terminal o usuário tem que estar dentro da. O jogo inicia automaticamente exibindo o tabuleiro. As jogadas devem ser digitadas no formato “A3-B4”, onde a letra representa a coluna e o número a linha. As peças brancas movem-se para frente e as pretas para trás, capturando peças adversárias ao pular sobre elas. Quando uma peça chega ao lado oposto do tabuleiro, é promovida a dama e passa a mover-se em ambas as direções. Para encerrar o jogo, digite “sair”. O jogo termina quando um dos jogadores fica sem peças, não há mais movimentos possíveis ou o jogador encerra manualmente.
+   
 5) Tratamento de exceções / programação defensiva
-6) Documentação (Doxygen)
+   Esse treho de código está dentro do método processarJogada da classe Jogo e ele serve para validar a entrada feita pelo usuário. 
+   Dentro do bloco try, o método validarEntrada() é chamado para analisar a jogada digitada pelo jogador. Se a entrada for incorreta, ele lança uma exceção do tipo invalid_argument, que é capturada pelo catch. Nesse caso, o programa exibe uma mensagem explicando o erro e encerra o processamento daquela jogada sem interromper o jogo.
+   Logo abaixo, há duas verificações adicionais:
+A primeira confere se o formato da jogada está correto (cinco caracteres e um hífen no meio, como em “A3-B4”). Se o formato estiver errado, é lançada uma exceção com uma mensagem explicando o formato correto.
+A segunda verifica se as posições informadas estão dentro dos limites válidos do tabuleiro (de A1 a H8). Caso não estejam, também é lançada uma exceção com a mensagem correspondente.
+
+  try {
+        validarEntrada(entrada, origX, origY, destX, destY);
+    } catch (const invalid_argument& e) {
+        cout << "Jogada invalida: " << e.what() << "" << endl;
+        return false;
+    }
+ 
+   if (entrada.length() != 5 || entrada[2] != '-') {
+        throw invalid_argument("Formato incorreto. Use o formato COLUNA_ORIGEM_LINHA_ORIGEM-COLUNA_DESTINO_LINHA_DESTINO (ex: A3-B4).");
+       }
+    
+    if (!Tabuleiro::posicaoValida(origX, origY) || !Tabuleiro::posicaoValida(destX, destY)) {
+        throw invalid_argument("Posições fora do tabuleiro (A1-H8).");
+    }
+
+
+6) Documentação (Doxygen)\ como gerar e acessar
+
 7) Link do vídeo
+
 8) Equipe
 
-   A Equipe é composta por 4 integrantes: Ana Versieux Mota, Helena Quintão Utsch, Maria Luiza Alvim Avelar e Sofia Gomes de Oliveira. No decorrer do trabalho, atuamos em conjunto para o seu desenvolvimento. Todo o trabalho foi escrito no VS code, plataforma que utilizamos para desenvolver o código e commitar o que foi feito no GitHub. Semanalmente nos reuníamos para discutir o que seria melhor e melhorar o nosso código em conjunto. Íamos escrevendo no VS code para que, quando estivesse pronto e todas tivessem aprovado tudo, iríamos commitar no GitHub. 
+A Equipe é composta por 4 integrantes: Ana Versieux Mota, Helena Quintão Utsch, Maria Luiza Alvim Avelar e Sofia Gomes de Oliveira. No decorrer do trabalho, atuamos em conjunto para o seu desenvolvimento. Todo o trabalho foi escrito no VS code, plataforma que utilizamos para desenvolver o código e commitar o que foi feito no GitHub. Semanalmente nos reuníamos para discutir o que seria melhor e melhorar o nosso código em conjunto. Íamos escrevendo no VS code para que, quando estivesse pronto e todas tivessem aprovado tudo, iríamos commitar no GitHub. 
 Dividimos o trabalho em algumas partes, que foi de responsabilidade das integrantes do grupo e, à medida que o projeto foi sendo feito, iríamos analisando e realizando mudanças em seu corpo. A Ana contribuiu em todo o projeto e, inicialmente atuou na parte de documentações e também na ideação do jogo e seus funcionamentos. No decorrer do projeto ajudou em todas as interfaces e, focou mais em seus commits referentes aos arquivos do main e também da peça. A Helena contribuiu em todo o projeto e, inicialmente atuou na criação do arquivo do tabuleiro. No decorrer do projeto ajudou em todas as interfaces e, focou mais em seus commits referentes ao arquivo do jogo e o readme. A Maria contribuiu em todo o projeto e, inicialmente atuou na parte de criação das pastas e também na ideação do jogo e seus funcionamentos. No decorrer do projeto ajudou em todas as interfaces e, focou mais em seus commits referentes aos arquivos hpp e Makefile. A Sofia contribuiu em todo o projeto e, inicialmente atuou na parte da peça. No decorrer do projeto ajudou em todas as interfaces e, focou mais em seus commits referentes aos arquivos do tabuleiro e parte do jogo. 
 Todas as integrantes foram migrando em diferentes partes com o intuito de que o trabalho ficasse de acordo com a opinião de todas. Além disso, realizamos ele de forma mais dinâmica buscando um melhor resultado.
 
 9) Ciclo de Desenvolvimento (sprints) e aprendizados
+
 10) Linha do tempo das sprints
 
     Todas as entregas foram organizadas e suas datas colocadas conforme as datas no calendário do professor. Utilizamos do VS code com o intuito de escrever o código por completo e commitar quando as partes estiverem com um escopo pronto, com o intuito de ter uma organização melhor em relação ao GitHub. O objetivo principal foi focar no código escrito e que ele esteja de acordo com o padrão que estávamos buscando, como seu envio feito no dia limite da entrega, para que nos organizássemos melhor em relação aos prazos.
@@ -47,10 +76,21 @@ Todas as integrantes foram migrando em diferentes partes com o intuito de que o 
     Entrega final: até o dia 11/11: Finalização dos códigos, implementação dos contratos, documentação, incrementos, finalização e vídeo. 
 
 11) Planejado x Realizado
-    
-   Inicialmente, não tínhamos certeza do que seria desenvolvido. Após uma análise em conjunto, resolvemos criar um jogo, pois esse tipo de mecanismo é utilizado por todas as integrantes do grupo. A partir dessa decisão, começamos a planejar o funcionamento e o desenvolvimento de um Jogo de Damas.
-   O projeto foi conduzido conforme o planejado, com uma arquitetura modular e bem organizada. As pastas include, src, documentação, .vscode e Doxyfile foram estruturadas desde o início, abrigando os arquivos necessários para o funcionamento do jogo. As classes Peca, Tabuleiro e Jogo foram implementadas de acordo com o que foi definido: Peca representa cada peça individual, Tabuleiro controla o estado do jogo e o posicionamento das peças, e Jogo coordena toda a lógica da partida, validando jogadas, alternando turnos e verificando o fim do jogo.   
-   O arquivo tabuleiro.cpp foi desenvolvido conforme o planejado, contendo as funções de inicialização, desenho, movimentação e remoção de peças, além de verificações de posição. O Makefile foi configurado corretamente para compilar e executar o programa, e o Doxygen foi utilizado para gerar a documentação técnica.
-   De forma geral, o que foi planejado — um jogo de damas funcional, documentado e estruturado — foi plenamente realizado. O resultado final atendeu às expectativas e prazos definidos, demonstrando organização, aprendizado e trabalho em equipe.
-    
-13) Evidências no GitHub
+    Planejado:
+O projeto tinha como objetivo desenvolver um jogo de damas funcional em C++, com estrutura modular e uso de classes orientadas a objetos. Inicialmente, foi planejada a implementação das classes principais (Peca, Tabuleiro e Jogo), controle de jogadas, validação de movimentos e interface em terminal. O repositório no GitHub foi criado para registrar cada etapa do desenvolvimento, com versionamento de código, commits descritivos e histórico de correções.
+
+     Realizado:
+O desenvolvimento foi concluído conforme o cronograma. Foram implementadas todas as classes planejadas, com destaque para a integração entre Jogo e Tabuleiro, que permite gerenciar o estado da partida, alternância de turnos e detecção automática de fim de jogo. A leitura de comandos via terminal foi validada, e o fluxo “planejado → jogada → atualização → exibição” funciona corretamente. O repositório no GitHub contém os commits documentando a evolução do código, incluindo o commit inicial de estruturação (“estrutura base do projeto”), o commit de integração (“implementação da lógica de movimento e promoção de peças”) e o commit final (“versão funcional do jogo de damas com controle completo de jogadas”). Além disso, há registros de issues resolvidas referentes à validação de jogadas inválidas e à promoção automática de peças a damas.
+
+12) Evidências no GitHub
+    O repositório do projeto apresenta evidências claras do desenvolvimento e validação do jogo. Há histórico completo de commits, documentando a evolução do código desde a estrutura inicial até a versão final funcional. Entre as principais evidências:
+
+Commit 1 – “Criação da estrutura base do projeto”: inclusão dos arquivos principais (main.cpp, jogo.hpp, peca.hpp, tabuleiro.hpp) e configuração inicial do repositório.
+
+Commit 2 – “Implementação da classe Peca e movimentação básica”: adição das funções de movimento e promoção de peças, com testes locais validados no terminal.
+
+Commit 3 – “Integração entre Jogo e Tabuleiro”: implementação da lógica de jogadas, alternância de turnos e verificação de fim de partida.
+
+Commit 4 – “Correção de bugs e validação de jogadas inválidas”: ajustes na lógica de captura e tratamento de entradas incorretas.
+
+Commit 5 – “Versão final: Jogo de Damas funcional”: consolidação de todas as funções e testes finais de jogabilidade.
