@@ -47,4 +47,10 @@ Todas as integrantes foram migrando em diferentes partes com o intuito de que o 
     Entrega final: até o dia 11/11: Finalização dos códigos, implementação dos contratos, documentação, incrementos, finalização e vídeo. 
 
 11) Planejado x Realizado
-12) Evidências no GitHub
+    
+   Inicialmente, não tínhamos certeza do que seria desenvolvido. Após uma análise em conjunto, resolvemos criar um jogo, pois esse tipo de mecanismo é utilizado por todas as integrantes do grupo. A partir dessa decisão, começamos a planejar o funcionamento e o desenvolvimento de um Jogo de Damas.
+   O projeto foi conduzido conforme o planejado, com uma arquitetura modular e bem organizada. As pastas include, src, documentação, .vscode e Doxyfile foram estruturadas desde o início, abrigando os arquivos necessários para o funcionamento do jogo. As classes Peca, Tabuleiro e Jogo foram implementadas de acordo com o que foi definido: Peca representa cada peça individual, Tabuleiro controla o estado do jogo e o posicionamento das peças, e Jogo coordena toda a lógica da partida, validando jogadas, alternando turnos e verificando o fim do jogo.   
+   O arquivo tabuleiro.cpp foi desenvolvido conforme o planejado, contendo as funções de inicialização, desenho, movimentação e remoção de peças, além de verificações de posição. O Makefile foi configurado corretamente para compilar e executar o programa, e o Doxygen foi utilizado para gerar a documentação técnica.
+   De forma geral, o que foi planejado — um jogo de damas funcional, documentado e estruturado — foi plenamente realizado. O resultado final atendeu às expectativas e prazos definidos, demonstrando organização, aprendizado e trabalho em equipe.
+    
+13) Evidências no GitHub
