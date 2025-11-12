@@ -22,16 +22,16 @@ void Jogo::iniciarJogo() {
         }
     }
 
-    for (int y = 0; y < 2; y++) {
-        for (int x = 0; x < 2; x++) {
+    for (int y = 0; y < 3; y++) {
+        for (int x = 0; x < TAMANHO_TABULEIRO; x++) {
             if ((x + y) % 2 != 0) {
                 tabuleiro_.adicionarPeca(new Peca(x, y, Cor::BRANCA));
             }
         }
     }
 
-    for (int y = 5; y < 6; y++) {
-        for (int x = 0; x < 1; x++) {
+    for (int y = 5; y < TAMANHO_TABULEIRO; y++) {
+        for (int x = 0; x < TAMANHO_TABULEIRO; x++) {
             if ((x + y) % 2 != 0) {
                 tabuleiro_.adicionarPeca(new Peca(x, y, Cor::PRETA));
             }
@@ -322,3 +322,4 @@ Cor Jogo::getVencedor() const {
 
     return (brancas > 0) ? Cor::BRANCA : Cor::PRETA;
 }
+
