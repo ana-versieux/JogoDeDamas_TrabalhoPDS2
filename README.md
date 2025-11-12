@@ -32,5 +32,11 @@ Todas as integrantes foram migrando em diferentes partes com o intuito de que o 
 
 9) Ciclo de Desenvolvimento (sprints) e aprendizados
 10) Linha do tempo das sprints
+
+    Todas as entregas foram organizadas e suas datas colocadas conforme as datas no calendário do professor. Utilizamos do VS code com o intuito de escrever o código por completo e commitar quando as partes estiverem com um escopo pronto, com o intuito de ter uma organização melhor em relação ao GitHub. O objetivo principal foi focar no código escrito e que ele esteja de acordo com o padrão que estávamos buscando, como seu envio feito no dia limite da entrega, para que nos organizássemos melhor em relação aos prazos.
+    Entrega inicial: até dia 09/10: Definição do tema e acesso ao GitHub.
+    Entrega parcial: até o dia 23/10: Estrutura dos diretórios, requisitos de modelagem e definição de contratos.
+    Entrega final: até o dia 11/11: Finalização dos códigos, implementação dos contratos, documentação, incrementos, finalização e vídeo. 
+
 11) Planejado x Realizado
 12) Evidências no GitHub
