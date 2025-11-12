@@ -57,8 +57,11 @@ A segunda verifica se as posições informadas estão dentro dos limites válido
 
 
 6) Documentação (Doxygen)\ como gerar e acessar
+  Para acessar a documentação, entre na pasta documentação, depois abra a subpasta html. Dentro dela, localize o arquivo index.html — é a partir desse arquivo que é possível abrir o conteúdo em um navegador e navegar interativamente por toda a documentação do projeto.
 
-7) Link do vídeo
+
+7) Link do vídeo 
+   https://youtu.be/jtMhS74YG08?si=i3fYo-OdYtMaz-NW 
 
 8) Equipe
 
@@ -68,12 +71,26 @@ Todas as integrantes foram migrando em diferentes partes com o intuito de que o 
 
 9) Ciclo de Desenvolvimento (sprints) e aprendizados
 
+O desenvolvimento do jogo foi dividido em três sprints principais, seguindo uma abordagem incremental e iterativa.
+
+Sprint 1 – Estruturação e Planejamento:
+Definição das classes principais (Peca, Tabuleiro e Jogo) e organização inicial do repositório no GitHub. Foram criados os primeiros commits e testadas as compilações básicas.
+Aprendizado: importância de um bom planejamento de classes e modularização para evitar dependências circulares e facilitar a manutenção.
+
+Sprint 2 – Implementação e Integração:
+Desenvolvimento da lógica de movimentação, promoção de peças e controle de turnos. Implementação dos métodos principais e integração entre Tabuleiro e Jogo, permitindo jogadas reais no terminal.
+Aprendizado: necessidade de validar entradas do usuário e tratar exceções para evitar erros de execução durante as jogadas.
+
+Sprint 3 – Testes, Correções e Entrega:
+Fase de testes completos no terminal, ajustes de regras, correção de bugs e adição de mensagens de feedback. O jogo foi finalizado e validado quanto à alternância de turnos e detecção de fim de partida.
+Aprendizado: reforço da importância dos testes contínuos e do versionamento no GitHub para garantir rastreabilidade e estabilidade no código final.
+
 10) Linha do tempo das sprints
 
     Todas as entregas foram organizadas e suas datas colocadas conforme as datas no calendário do professor. Utilizamos do VS code com o intuito de escrever o código por completo e commitar quando as partes estiverem com um escopo pronto, com o intuito de ter uma organização melhor em relação ao GitHub. O objetivo principal foi focar no código escrito e que ele esteja de acordo com o padrão que estávamos buscando, como seu envio feito no dia limite da entrega, para que nos organizássemos melhor em relação aos prazos.
-    Entrega inicial: até dia 09/10: Definição do tema e acesso ao GitHub.
-    Entrega parcial: até o dia 23/10: Estrutura dos diretórios, requisitos de modelagem e definição de contratos.
-    Entrega final: até o dia 11/11: Finalização dos códigos, implementação dos contratos, documentação, incrementos, finalização e vídeo. 
+    Entrega inicial: Definição do tema, do grupo e acesso ao GitHub.
+    Entrega parcial: Estrutura dos diretórios, requisitos de modelagem e definição de contratos.
+    Entrega final: Finalização dos códigos, implementação dos contratos, documentação, incrementos, finalização e vídeo. 
 
 11) Planejado x Realizado
     Planejado:
