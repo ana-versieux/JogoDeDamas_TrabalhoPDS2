@@ -1,4 +1,12 @@
-O arquivo “tabuleiro.hpp” define a classe “Tabuleiro”, que representa o tabuleiro fixo de 8x8 casas do jogo. Ele armazena as peças em uma matriz e oferece métodos para adicionar, remover, mover e acessar peças, além de verificar se uma posição está vazia ou inválida. O método “desenharTabuleiro()” exibe o estado atual do jogo e o método “inicializarCasas()” prepara o tabuleiro para iniciar outra jogada. 
+Jogo de Damas
+1) Como compilar e executar
+2) Arquitetura / organização
+
+   O jogo é dividido em diferentes pastas: .vscode, documentação, include, src e o Doxyfile. Em .vscode é possível encontrar detalhes das configurações e compilações, tendo em vista que todo o trabalho foi escrito na plataforma VS code e, depois, transferido por meio dos commits para o Git Hub. Em documentação é possível encontrar dois arquivos: html e latex, que possuem dados do projeto. Na pasta include, há os arquivos .hpp, sendo eles “jogo.hpp”, “peca.hpp” e “tabuleiro.hpp”, possuindo as classes necessárias para o funcionamento do jogo. Na pasta src há 3 arquivos, o “jogo.cpp”, onde há todo o processo para que o jogo ocorra, o Makefile com suas definições e “tabuleiro.cpp”, com todas as funções para que o tabuleiro seja feito. Além disso, há o Doxyfile, com as descrições das configurações utilizadas no jogo. Cada arquivo do código será detalhado no decorrer do ReadMe.
+
+3) Funcionalidades entregues e itens fora do escopo
+
+   O arquivo “tabuleiro.hpp” define a classe “Tabuleiro”, que representa o tabuleiro fixo de 8x8 casas do jogo. Ele armazena as peças em uma matriz e oferece métodos para adicionar, remover, mover e acessar peças, além de verificar se uma posição está vazia ou inválida. O método “desenharTabuleiro()” exibe o estado atual do jogo e o método “inicializarCasas()” prepara o tabuleiro para iniciar outra jogada. 
 
 O arquivo “peca.hpp” contém a classe “Peca”, que representa cada peça individualmente. Nela está armazenado a posição, cor (branca ou preta) e se é uma dama. Possui métodos para mover, promover a dama, consultar posição e cor, e verificar se o movimento é permitido. A estrutura “Posicao” ajuda no controle das coordenadas. As cores das peças também são usadas para determinar os dois lados do jogo.
 
@@ -15,3 +23,13 @@ Em validarEntrada, é garantido que o formato está em sua forma correta, utiliz
 Em aplicarJogada, é calculada a direção e caminho da orig ao dest. A primeira peça encontrada no caminho, caso houver, é removida, efetivando a captura. Por fim, chama tabuleiro_.moverPeca. Em alterarTurno() há uma troca de Branca <-> Preta. Em transformarEmDama, se a peça não é dama, a branca vira dama quando alcançar y == TAMANHO_TABULEIRO -1 e a preta vira dama quando alcançar y == 0; Peca -> setToDama é chamado e uma mensagem é imprimida.
 Em jogoAcabou() const e getVencedor() const, ambos contam quantas peças brancas e pretas existem no tabuleiro. jogoAcabou retorna true se uma das cores ficou sem peças e getVencedor retorna BRANCA se há alguma branca, caso contrário, retorna PRETA. 
 Em “jogo.cpp” foi utilizado de entrada textual no formato A3-B4 com conversão para índices de matriz; exceções std::invalid_argument para validar formato/posições; principais regras de damas; fluxo de jogo organizado; ponteiros para peças e um contêiner Tabuleiro que oferece operações, e mensagens de erro claras para guiar o jogador.
+
+4) Instruções de uso
+5) Tratamento de exceções / programação defensiva
+6) Documentação (Doxygen)
+7) Link do vídeo
+8) Equipe
+9) Ciclo de Desenvolvimento (sprints) e aprendizados
+10) Linha do tempo das sprints
+11) Planejado x Realizado
+12) Evidências no GitHub
