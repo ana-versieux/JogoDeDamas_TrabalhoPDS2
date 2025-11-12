@@ -27,9 +27,10 @@ Jogo de Damas
 8) Equipe
 
    A Equipe é composta por 4 integrantes: Ana Versieux Mota, Helena Quintão Utsch, Maria Luiza Alvim Avelar e Sofia Gomes de Oliveira. No decorrer do trabalho, atuamos em conjunto para o seu desenvolvimento. Todo o trabalho foi escrito no VS code, plataforma que utilizamos para desenvolver o código e commitar o que foi feito no GitHub. Semanalmente nos reuníamos para discutir o que seria melhor e melhorar o nosso código em conjunto. Íamos escrevendo no VS code para que, quando estivesse pronto e todas tivessem aprovado tudo, iríamos commitar no GitHub. 
-Dividimos o trabalho em algumas partes, que foi de responsabilidade das integrantes do grupo e, à medida que o projeto foi sendo feito, iríamos analisando e realizando mudanças em seu corpo.
+Dividimos o trabalho em algumas partes, que foi de responsabilidade das integrantes do grupo e, à medida que o projeto foi sendo feito, iríamos analisando e realizando mudanças em seu corpo. A Ana contribuiu em todo o projeto e, inicialmente atuou na parte de documentações e também na ideação do jogo e seus funcionamentos. No decorrer do projeto ajudou em todas as interfaces e, focou mais em seus commits referentes aos arquivos do main e também da peça. A Helena contribuiu em todo o projeto e, inicialmente atuou na criação do arquivo do tabuleiro. No decorrer do projeto ajudou em todas as interfaces e, focou mais em seus commits referentes ao arquivo do jogo e o readme. A Maria contribuiu em todo o projeto e, inicialmente atuou na parte de criação das pastas e também na ideação do jogo e seus funcionamentos. No decorrer do projeto ajudou em todas as interfaces e, focou mais em seus commits referentes aos arquivos hpp e Makefile. A Sofia contribuiu em todo o projeto e, inicialmente atuou na parte da peça. No decorrer do projeto ajudou em todas as interfaces e, focou mais em seus commits referentes aos arquivos do tabuleiro e parte do jogo. 
+Todas as integrantes foram migrando em diferentes partes com o intuito de que o trabalho ficasse de acordo com a opinião de todas. Além disso, realizamos ele de forma mais dinâmica buscando um melhor resultado.
 
-10) Ciclo de Desenvolvimento (sprints) e aprendizados
-11) Linha do tempo das sprints
-12) Planejado x Realizado
-13) Evidências no GitHub
+9) Ciclo de Desenvolvimento (sprints) e aprendizados
+10) Linha do tempo das sprints
+11) Planejado x Realizado
+12) Evidências no GitHub
