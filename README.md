@@ -26,8 +26,10 @@ Jogo de Damas
 7) Link do vídeo
 8) Equipe
 
-   A Equipe é composta por 4 integrantes: Ana Versieux Mota, Helena Quintão Utsch, Maria Luiza Alvim Avelar e Sofia Gomes de Oliveira. No decorrer do trabalho, atuamos em conjunto para o seu desenvolvimento.
-9) Ciclo de Desenvolvimento (sprints) e aprendizados
-10) Linha do tempo das sprints
-11) Planejado x Realizado
-12) Evidências no GitHub
+   A Equipe é composta por 4 integrantes: Ana Versieux Mota, Helena Quintão Utsch, Maria Luiza Alvim Avelar e Sofia Gomes de Oliveira. No decorrer do trabalho, atuamos em conjunto para o seu desenvolvimento. Todo o trabalho foi escrito no VS code, plataforma que utilizamos para desenvolver o código e commitar o que foi feito no GitHub. Semanalmente nos reuníamos para discutir o que seria melhor e melhorar o nosso código em conjunto. Íamos escrevendo no VS code para que, quando estivesse pronto e todas tivessem aprovado tudo, iríamos commitar no GitHub. 
+Dividimos o trabalho em algumas partes, que foi de responsabilidade das integrantes do grupo e, à medida que o projeto foi sendo feito, iríamos analisando e realizando mudanças em seu corpo.
+
+10) Ciclo de Desenvolvimento (sprints) e aprendizados
+11) Linha do tempo das sprints
+12) Planejado x Realizado
+13) Evidências no GitHub
