@@ -1,3 +1,8 @@
+/**
+ * @file tabuleiro.hpp
+ * @details Este arquivo contém a definição da classe Tabuleiro, que representa o tabuleiro do jogo de damas.
+ */
+
 #ifndef TABULEIRO_H
 #define TABULEIRO_H
 
@@ -5,6 +10,10 @@
 
 const int TAMANHO_TABULEIRO = 8;
 
+/**
+ * @brief Classe Tabuleiro
+ * @details Contém os atributos e métodos necessários para gerenciar o tabuleiro do jogo de damas.
+ */
 class Tabuleiro {
 public:
     Tabuleiro();

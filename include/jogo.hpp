@@ -1,3 +1,8 @@
+/**
+ * @file jogo.hpp
+ * @details Este arquivo contém a definição da classe Jogo, que gerencia a lógica do jogo de damas.
+ */
+
 #ifndef JOGO_H
 #define JOGO_H
 
@@ -5,6 +10,10 @@
 #include "peca.hpp"
 #include <string>
 
+/**
+ * @brief Classe Jogo
+ * @details Contém os atributos e métodos necessários para gerenciar o jogo de damas.
+ */
 class Jogo {
 public:
     Jogo();
